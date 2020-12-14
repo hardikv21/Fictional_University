@@ -31,7 +31,12 @@
                 <div class="site-header__menu group">
                     <nav class="main-navigation">
                         <ul>
-                            <li>
+                            <li <?php
+                                if(is_page("about-us") or wp_get_post_parent_id(0) == 13)
+                                {
+                                    echo 'class="current-menu-item"';
+                                }
+                            ?>>
                                 <a href="<?php
                                     echo site_url("/about-us");
                                 ?>">About Us</a>
