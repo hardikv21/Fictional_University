@@ -25,3 +25,5 @@
 
 ## Archive file will add dynamic title on the page.
 * It uses archive methods of wordpress.
+
+## Node.js setup
