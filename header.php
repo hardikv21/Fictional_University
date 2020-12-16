@@ -44,8 +44,15 @@
                             <li>
                                 <a href="#">Programs</a>
                             </li>
-                            <li>
-                                <a href="#">Events</a>
+                            <li <?php
+                                if(is_page("about-us") or wp_get_post_parent_id(0) == 13)
+                                {
+                                    echo 'class="current-menu-item"';
+                                }
+                            ?>>
+                                <a href="<?php
+                                    echo site_url("/events");
+                                ?>">Events</a>
                             </li>
                             <li>
                                 <a href="#">Campuses</a>
