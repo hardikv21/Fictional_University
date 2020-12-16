@@ -31,10 +31,11 @@
                     the_permalink();
                 ?>">
                     <span class="event-summary__month"><?php
-                        the_time("M");
+                        $date = new DateTime(get_field("event_date"));
+                        echo $date -> format("M");
                     ?></span>
                     <span class="event-summary__day"><?php
-                        the_time("j");
+                        echo $date -> format("j");
                     ?></span>
                 </a>
                 <div class="event-summary__content">

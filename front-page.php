@@ -31,10 +31,11 @@
                             the_permalink();
                         ?>">
                             <span class="event-summary__month"><?php
-                                the_time("M");
+                                $date = new DateTime(get_field("event_date"));
+                                echo $date -> format("M");
                             ?></span>
                             <span class="event-summary__day"><?php
-                                the_time("j");
+                                echo $date -> format("j");
                             ?></span>
                         </a>
                         <div class="event-summary__content">
@@ -47,7 +48,14 @@
                             </h5>
                             <p>
                                 <?php
-                                    echo wp_trim_words(get_the_content(), 21);
+                                    if(has_excerpt())
+                                    {
+                                        echo get_the_excerpt();
+                                    }
+                                    else
+                                    {
+                                        echo wp_trim_words(get_the_content(), 21);
+                                    }
                                 ?> <a href="<?php
                                     the_permalink();
                                 ?>" class="nu gray">Learn more</a>
@@ -60,7 +68,7 @@
                 ?>
                 <p class="t-center no-margin">
                     <a href="<?php
-                        echo site_url("/event");
+                        echo get_post_type_archive_link("event");
                     ?>" class="btn btn--blue">View All Events</a>
                 </p>
             </div>
@@ -97,7 +105,14 @@
                                 </h5>
                                 <p>
                                     <?php
-                                        echo wp_trim_words(get_the_content(), 21);
+                                        if(has_excerpt())
+                                        {
+                                            echo get_the_excerpt();
+                                        }
+                                        else
+                                        {
+                                            echo wp_trim_words(get_the_content(), 21);
+                                        }
                                     ?> <a href="<?php
                                         the_permalink();
                                     ?>" class="nu gray">Read more</a>
