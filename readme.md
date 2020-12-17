@@ -33,3 +33,8 @@
 ## Event Page
 * Event page will display 10 events at a time.
 * It will also give you option to show a single event.
+* Event Date - custom field added for the event date and it will be required for every event post.
+* Event sorted and displayed by the event_date field using custom query.
+
+## Past Events Page
+* Past events are seperated to this page.
