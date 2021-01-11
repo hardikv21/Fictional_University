@@ -35,6 +35,14 @@
 * It will also give you option to show a single event.
 * Event Date - custom field added for the event date and it will be required for every event post.
 * Event sorted and displayed by the event_date field using custom query.
+* Every event will display related program(s) on their own page.
 
 ## Past Events Page
 * Past events are seperated to this page.
+
+## Program Page
+* Program page will display all programs.
+* It will also give you option to show a single program.
+* Related Program - custom field added for the program to relate with one or more events.
+* Program sorted and displayed by the title field using custom query.
+* Every program will display related upcoming event(s) on their own page.
